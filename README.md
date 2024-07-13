@@ -9,8 +9,8 @@
   Then, using the code analyzed during the lab session, we manually changed the number of shortening and puncturing bits for data with different QBER values in two cases: deterministic number of   errors & BSC channel and analyzed how the efficiency and the number of iterations are affected. We also implemented a different error correction procedure ([Cascade](https://link.springer.com/content/pdf/10.1007/3-540-48285-7_35.pdf)), tested it, and evaluated the efficiency as a function of the QBER, comparing it to the LDPC case. Finally, we compared the efficiencies obtained with both the standard definition of efficiency $f_1$ and another efficiency measure $f_2 = \lambda_{EC} \ / \ n_Z - h_2(E_z)$.
 
 * **Lab 03 (QKD)**: the dataset includes three files of raw keys:
-  - `input-keys.alice`: Alice's choices of basis and state.
-  - `input-keys.decoy`: Alice's choices of decoy state.
+  - `input-keys.alice`: Alice's choices of basis and state;
+  - `input-keys.decoy`: Alice's choices of decoy state;
   - `input-keys.bob`: Bob's detected states.
 
   These raw keys are obtained from a Quantum Key Distribution (QKD) run after synchronization and discarding of unreceived qubits. Please refer to the report for details regarding encoding and decoding procedures. The protocol employed is the 3-state 1-decoy efficient BB84 protocol, with clearly defined parameters as specified in the pdf. Using the provided dataset, we estimate the Quantum Bit Error Rate (QBER) in both bases and Secret Key Rate (SKR) as a function of time. The main focus was on estimating SKR using appropriate block sizes and security parameters to account for finite size effects. Full classical post-processing steps such as Error Correction or Privacy Amplification are not required for this estimation.
